@@ -1,0 +1,45 @@
+*{
+    font-family: "Fjalla One", sans-serif,cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+.container{
+    padding-top: 80px;
+    
+}
+.col{
+    margin: 15px 0px 15px;
+    border-radius: 30px;
+    padding: 8px;
+    justify-content: space-around;
+
+}
+img{
+    border-radius: 30px;
+}
+.row{
+    justify-content: center;
+}
+.card{
+    border: none;
+    border-radius: 5%;
+}
+.col:hover{
+    box-shadow: 10px 7px 20px rgb(38, 37, 37);
+}
+.card-title{
+    margin-bottom: 3px;
+    font-size: 25px;
+}
+.card-text{
+    font-size: 20px;
+}
+@media screen and (max-width:300px) {
+    .card-title{
+        margin-bottom: 2px;
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,58 @@
+*{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.navbar-brand{
+    margin: 10px  40px 10px;
+
+}
+.title{
+    font-family: "Pacifico",cursive;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 40px;
+    cursor: pointer;
+}
+.offcanvas-title{
+    margin-top: 30px;
+}
+.btn-outline-success:hover{
+    background-color: black;
+    color: #fff;
+}
+.btn-outline-success{
+    background-color: rgb(217, 216, 216);
+    color: black;
+    border:none;
+}
+.cont2 {
+   
+    padding:  10px 40px 0px;
+    
+}
+.navbar-toggler{
+    border: none;
+    margin:  10px 25px 0px;
+
+}
+.card{
+    height: 6px;
+}
+.nav-item{
+    margin-left: 10px;
+}
+@media screen and (max-width: 400px){
+    .title{
+
+        font-weight: 300;
+        font-size: 30px;
+        margin: 5px 10px;
+        
+    }
+
+    .navbar-toggler{
+        margin: 0px 15px 0px;
+    }
+}

@@ -1,0 +1,32 @@
+<div class="bg">
+    <div class="container">
+      <div class="hding di">
+        <h1><strong>Elite Looks !</strong></h1>
+        <h4>Sign in to your account</h4>
+      </div>
+  
+      <div class="fms mb-3 di">
+  
+          <label>Email</label>
+            <input id="input" class="form-control" placeholder="Enter email" [formControl]="email" required>
+            <div *ngIf="email.touched">
+              <div *ngIf="email.invalid" >{{getErrorMessage()}}</div>
+            </div>
+  
+          <label>Password</label>
+            <input  id="input" class="form-control" type='password'placeholder="Enter password">
+         <p>Forgot Password</p>
+          
+      </div>
+      <div class="butt di" id="but"><button mat-raised-button >Log in</button></div>
+  
+  
+      <div class="snup di">
+        <p>Don't have a account?</p>
+        <div class="button di" id="but">
+          <button type="button" class="btn btn-secondary" routerLink="/form" >Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,106 @@
+*{
+    font-family:'Be Vietnam Pro', 'Gill Sans MT';
+    color: black;
+    font-size: 16px;
+
+    
+}
+.bg{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 5px;
+  }
+.container{
+    width: 100%;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    flex-basis: 100%;
+}
+.cont2{
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    padding:0 20px 0;
+}
+img{
+     height:fit-content;
+    
+}
+.card{
+    flex-basis: 50%;
+
+}
+
+.hding,.para,.login,.sumit{
+    text-align: center;
+}
+button{
+    height: 35px;
+    width: 410px;
+    border: none;
+    color: #141c25;
+}
+#butt{
+    background-color: #f4c753;
+}
+#but{
+    background-color: #e4e9f1;
+}
+.form-control{
+    border-radius: 6px;
+    background-color: #e4e9f1;
+    padding: 10px;
+    color:#4780c2;
+}
+.form-check-input{
+    border:1px solid #4780c2;
+    color: #4780c2;
+}
+p{
+    font-size: 13px;
+}
+h1 strong{
+    font-size: 18px;
+}
+.form .para .login{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Styles for larger screens */
+.card .cont2 {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Styles for medium-sized screens */
+  @media screen and (max-width: 768px) {
+    .card{
+      max-width: 80%;
+    }
+    .mb-3{
+        width: 300px;
+    }
+    .container{
+         width: 100px;
+         padding: 0px;
+    }
+    
+    
+    button{
+        width: 300px;
+    }
+  }
+  
+  /* Styles for smaller screens */
+  @media screen and (max-width: 480px) {
+    .card .cont2 {
+      max-width: 100%;
+    }
+  }

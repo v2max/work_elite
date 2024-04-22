@@ -1,0 +1,123 @@
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color:#050505;
+  }
+  .bg{
+     height: 100%;
+     
+    
+    align-items: center;
+    
+  
+  }
+  
+  
+  .container{
+    margin-top: 250px;
+    height: 100%;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+  
+    object-fit:cover;
+    
+  
+  }
+  .fms{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 0 0 20px;
+    margin-top: 30px;
+    object-fit: cover;
+  }
+  .butt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    object-fit: cover;
+  }
+  .snup{
+    align-items: center;
+    object-fit: cover;
+  
+  }
+  
+  
+  input#input{
+    
+     height:50px;
+      border-radius: 10px;
+     padding: 10px;
+     margin: 10px 0 30px;
+     background-color: #e4e9f1;
+     
+  }
+  h1{
+    size: 60px;
+  }
+  .btn-secondary{
+    border: none;
+    color: #050505;
+    background-color: #e4e9f1;
+  
+    
+  }
+  
+  .mat-mdc-raised-button{
+    background-color: #f4c753 !important;
+    border-radius: 5px;
+    width: 80px;
+  }
+  label{
+    margin-left: 20px;
+  }
+  h1 strong{
+    font-size: 40px;
+    font-family: "Pacifico",cursive;
+      font-weight: 400;
+      font-style: normal;
+  }
+  h4{
+    font-family: "Pacifico",cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  label,h4{
+    font-size: 20px;
+  }
+  a,p{
+    font-size: 15px;
+    
+  }
+  
+  
+  
+  
+  
+  
+  /* Styles for larger screens */
+  .bg,.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Styles for medium-sized screens */
+  @media screen and (max-width: 768px) {
+    .bg,.container {
+      max-width: 80%;
+    }
+  }
+  
+  /* Styles for smaller screens */
+  @media screen and (max-width: 480px) {
+    .bg,.container {
+      max-width: 100%;
+    }
+  }

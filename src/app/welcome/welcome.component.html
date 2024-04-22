@@ -1,0 +1,127 @@
+
+<div class="container-bg">
+    <div class="container">
+      <!-- photo slider -->
+      <div class="slide">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="img-slide"
+                src="assets/img/slider1.jpg"
+                class="d-block w-100"
+                alt="assets/img/slider1.jpg"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title"></h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img-slide"
+                src="assets/img/slider2.jpg"
+                class="d-block w-100"
+                alt="assets/img/slider2.jpg"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title">Elite!</h1>
+                <p>just feel our looks</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img-slide"
+                src="assets/img/slider3.jpg"
+                class="d-block w-100"
+                alt="assets/img/slider3.jpg"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="title"></h1>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- video div -->
+      <div class="vid-hd">
+        <h1 class="hd">Set trends</h1>
+      </div>
+      <div class="video-container">
+        <video autoplay  [loop]="true"  [muted]="true" [src]="vdo" type="video/webm" >
+        
+        </video>
+      </div>
+  
+      <!-- genter Category -->
+      <div class="hding ht1">
+        <h1 class="hd">Shop By Category</h1>
+      </div>
+  
+      <div class="gen">
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+           
+              <div class="card card-gen" (click)="clickMen()" >
+                <img class="img-gen" src="assets/img/gen-men2.jpg" alt="" />
+              </div>
+            
+          </div>
+          <div class="col-sm-6">
+            
+              <div class="card card-gen" (click)="clickWomen()" >
+                <img
+                  class="img-gen"
+                  src="assets/img/gen-women2.jpg"
+                  alt=""
+                />
+              </div>
+            
+          </div>
+        </div>
+      </div>
+  
+      <div class="hding ht2">
+        <h1 class="hd">New Collections</h1>
+      </div>
+      <div class="col-frm" (click)="clicekNwCol()">
+        <img class="col-pic" src="assets/img/newColl.jpg" alt="" />
+      </div>
+  
+      <!-- Collections cards -->
+      <div class="row row-cols-2 row-cols-md-4 g-12">
+        <div class="col" *ngFor="let boxset of newcol">
+          <div class="card" (click)="openPopup(boxset)">
+            <img src="{{boxset.img }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ boxset.name }}</h5>
+              <p class="card-text">{{ boxset.subname }}</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <!-- <app-footer></app-footer> -->
+  

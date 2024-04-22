@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+  
+    <div class="container-fluid">
+      <h1 class="navbar-brand title" routerLink="">Elite looks</h1>
+      <button  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title title" id="offcanvasNavbarLabel" data-bs-dismiss="offcanvas" aria-label="Close" routerLink="" >Elite looks!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <button class="nav-link active"  data-bs-dismiss="offcanvas" aria-label="Close" aria-current="page" routerLink="/about" >About us</button> 
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" >Wishlist</button>
+              
+            </li>
+          </ul>
+            <button class="btn btn-outline-success" data-bs-dismiss="offcanvas" aria-label="Close" type="submit" routerLink="/login">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </nav>
