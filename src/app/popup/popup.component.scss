@@ -1,5 +1,5 @@
 .bg{
-    height:100%;
+    margin:0px;
     display: flex;
     justify-content: center;
     border-radius: 10%;
@@ -10,10 +10,8 @@
  }
 .container{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     height: 100%;
-   
     object-fit:cover;
    
 
@@ -22,10 +20,9 @@ img,h1,h4,button{
     object-fit:cover;
     flex-wrap: wrap;
 }
+
 .imgs{
     display: flex;
-    width: auto;
-    // height:550px;
     object-fit: contain;
     justify-content: center;
     object-fit: cover;
@@ -79,60 +76,62 @@ p{
 
 
   
-  @media screen and (max-width: 990px) {
- 
-    .imgs{
-    
-     width: fit-content;
-     padding: 0px;
-
-    }
-    h1{
-        font-size: 20px;
-        margin: 10px 0 5px;
-        font-weight: bold;
-    }
-    h4{
-        font-size: 12.5px;
-        margin:0px;
-    }
-    p{
-        font-size: 10px;
-        margin-top: 0px;
-    }
+  @media screen and (max-width: 1000px) { 
+   
     .container{
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        padding: 0px;
-        margin: 0;
-        width: fit-content;
-        margin: 0px;
-     }
-    
-    .modal-fullscreen-lg-down {
-        width: fit-content;
-        max-width: none;
-        
+       flex-direction: column;
     }
-
-    .info {
-        
-         height:fit-content;
-         padding: 0px;
-    }
-
-    
   }
 
  
   
-  @media screen and (max-width: 500px) {
-      .imgs{
-         height: 400px; 
-         width: auto;
-      }
+  @media screen and (max-width: 600px) {
+    h1{
+        font-size: 35px;
+        margin: 15px 0 15px;
+        
+        
+    }
+   
+    p{
+        font-size: 20px;
+        margin-top: 2px;
+    }
+
+    button{
+        height: 35px;
+        margin: 10px 0 6px;
+    }
+
+     
   }
-  @media screen and (max-width:300px){
+  @media screen and (max-width:350px){
+
+    p{
+        display: none;
+    }
+
+    .txt{
+        margin-bottom: 10px;
+    }
     
+    h1{
+        font-size: 22px;
+        margin: 15px 0 15px;
+        
+        
+    }
+    h4{
+        font-size: 15px;
+        margin: 5px 0 10px;
+    }
+    .txt{
+        margin-bottom: 10px;
+    }
+
+    button{
+        height: 30px;
+        margin: 10px 0 6px;
+    }
+  
   }

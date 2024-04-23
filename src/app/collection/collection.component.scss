@@ -34,6 +34,16 @@ img{
 .card-text{
     font-size: 20px;
 }
+
+@media screen and (max-width:600px) {
+    .card-title{
+        margin-bottom: 2px;
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 15px;
+    }
+}
 @media screen and (max-width:300px) {
     .card-title{
         margin-bottom: 2px;
