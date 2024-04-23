@@ -13,12 +13,16 @@
     justify-content: center;
     height: 100%;
     object-fit:cover;
+    padding: 10px 10px 10px;
    
 
 }
 img,h1,h4,button{
     object-fit:cover;
     flex-wrap: wrap;
+}
+img{
+    border-radius: 15px;
 }
 
 .imgs{
@@ -47,6 +51,7 @@ button{
     height: 50px;
     margin: 20px 0 10px;
     padding: 0;
+    cursor: pointer;
 }
 h1{
     font-size: 50px;
@@ -132,6 +137,10 @@ p{
     button{
         height: 30px;
         margin: 10px 0 6px;
+    }
+    .mat-mdc-dialog-surface,.mdc-dialog__surface{
+
+        height: 800px !important; /* Override height */
     }
   
   }
