@@ -19,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { PopupComponent } from './popup/popup.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PopupComponent } from './popup/popup.component';
     LogComponent,
     FormComponent,
     FooterComponent,
-    PopupComponent
+    PopupComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ export class PopupComponent {
 
   [x: string]: any;
   boxset: any;
-  showNavTab: boolean = false;
+  // wishlist:any = [];
 
   constructor(
     public dialogRef: MatDialogRef<PopupComponent>,
@@ -19,12 +19,28 @@ export class PopupComponent {
     console.log('djfhjdhfjdh', data);
   }
 
-  hidetab() {
-    this.showNavTab = false;
-  }
-
   close(): void {
     this.dialogRef.close();
+  }
+
+  wish(){
+
+    let existWish = localStorage.getItem('wishlist')
+    let wishlist:any = existWish ? JSON.parse(existWish) : [];
+    
+    let list = this.data;
+
+    console.log(list,"data for list");
+
+     wishlist.push(list);
+
+    console.log(wishlist,"fitted in arry");
+
+    let stringfiy = JSON.stringify(wishlist);
+
+    localStorage.setItem("wishlist",stringfiy);
+
+
   }
 
 }
