@@ -35,8 +35,8 @@ export class CollectionComponent implements OnInit {
     console.log("hjhfjdfdjfh",boxset )
     const dialogRef = this.dialog.open(PopupComponent, {
       
-      width: '1000px',
-      height:'600px',
+      width: '800px',
+      height:'550px',
     
       data: boxset
     });
