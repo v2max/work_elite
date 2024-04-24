@@ -18,6 +18,13 @@ body{
     max-width: 100%;
     
 }
+p{
+    
+    margin-bottom: 0px;
+    font-weight: 5px;
+    font-size:12px;
+
+}
 
 
 .fd,.fhd{
@@ -61,9 +68,13 @@ body{
     width: fit-content;
     object-fit: cover;
 }
-
-.logo{
-    height: 40px;
+.logos{
+   display: flex;
+   flex-direction: row;
+   
+}
+.logos .logo{
+    height: 30px;
     object-fit: cover;
 }
 img{
