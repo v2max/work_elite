@@ -125,6 +125,48 @@
 
 
 
+  .f-hd-logo{
+    height: 100px;
+    width: fit-content;
+    object-fit: cover;
+}
+
+.fhd-card,.hd{
+    text-align: center;
+    align-items: center;
+}
+
+.end{
+    display:flex;
+    flex-direction: row;  
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1000px){
+   .card-body h1 strong{
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+   }
+   .fhd-card img{
+    
+     
+   }
+   .col{
+    padding: 0;
+    margin: 0;
+   }
+
+}
+@media screen and (max-width: 600px){
+
+    .card-body h1 strong{
+        display:none;
+   }
+      
+}
+
+
 
 
 
