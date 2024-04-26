@@ -1,6 +1,6 @@
 <div class="container-bg">
     <div class="container">
-        <div class="row row-cols-2 row-cols-md-3">
+        <div class="row row-cols-2 row-cols-md-4">
             <div class="col" *ngFor="let wishset of collection">
                   <div class="card">
                       <div class="card-img">
@@ -9,9 +9,11 @@
                     <div class="card-body">
                       <h2><label for="">₹</label>{{wishset.rate}}</h2>
                       <h2 class="card-title">{{wishset.name}}</h2>
-                      <h3 class="card-text">{{wishset.subname}}</h3>
-                      <div (click)="remove(wishset)">x</div>
+                      <h3 class="card-text">{{wishset.subname}}</h3> 
                     </div>
+                    <div class="remove">
+                    <button class="btn btn-outline-secondary" type="button" (click)="remove(wishset)">remove</button>
+                  </div>
                   </div>  
               </div>
         </div>

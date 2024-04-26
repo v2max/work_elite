@@ -34,6 +34,15 @@ img{
 .card-text{
     font-size: 20px;
 }
+.remove{
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.remove button{
+    width: 100%;
+}
+
 
 @media screen and (max-width:600px) {
     .card-title{
