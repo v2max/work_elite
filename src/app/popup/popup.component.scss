@@ -127,7 +127,10 @@ p{
   @media screen and (max-width:450px){
 
     p{
-        display: none;
+     margin: 0px;
+    }
+    .hd{
+        margin-bottom: 0px;
     }
 
     .txt{
@@ -153,4 +156,9 @@ p{
         margin: 10px 0 6px;
     }
   
+  }
+  @media screen and (max-width:320px){
+    p{
+        display:none;
+       }
   }

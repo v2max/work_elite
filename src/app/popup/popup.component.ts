@@ -93,7 +93,7 @@ export class PopupComponent implements OnInit {
 
 function setbtn() {
   const myButton = document.querySelector('#wishbtn') as HTMLButtonElement;
-  myButton.textContent = 'Exists in Wishlist';
+  myButton.textContent = 'Added In Wishlist';
   myButton.disabled = true;
 }
 
