@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PopupComponent } from '../popup/popup.component';
+import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-wishlist',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
+
+  constructor( private route: ActivatedRoute,private dialog: MatDialog){}
+
   [x: string]: any;
 collection:any = [];
 
@@ -65,6 +71,18 @@ collection:any = [];
 
 }
 
+openPopup(wishset:any): void {
+
+  console.log("hjhfjdfdjfh",wishset )
+  const dialogRef = this.dialog.open(PopupComponent, {
+    
+    width: '800px',
+    height:'550px',
+  
+    data: wishset
+  });
+}
+
 
 }
 
@@ -84,5 +102,6 @@ function isEqual(obj1: { [x: string]: any; }, obj2: { [x: string]: any; }) {
 
   return true;
 }
+
 
  

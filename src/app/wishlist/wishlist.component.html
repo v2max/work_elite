@@ -2,14 +2,15 @@
     <div class="container">
         <div class="row row-cols-2 row-cols-md-4">
             <div class="col" *ngFor="let wishset of collection">
-                  <div class="card">
+                  <div class="card" (click)="openPopup(wishset)">
                       <div class="card-img">
                         <img src={{wishset.img}} class="card-img-top" alt="...">
                       </div>
                     <div class="card-body">
-                      <h2><label for="">₹</label>{{wishset.rate}}</h2>
+                      
                       <h2 class="card-title">{{wishset.name}}</h2>
-                      <h3 class="card-text">{{wishset.subname}}</h3> 
+                      <h2><label for="">₹</label>{{wishset.rate}}</h2>
+                      
                     </div>
                     <div class="remove">
                     <button class="btn btn-outline-secondary" type="button" (click)="remove(wishset)">remove</button>
