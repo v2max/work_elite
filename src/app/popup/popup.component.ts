@@ -73,6 +73,7 @@ export class PopupComponent {
   }
 }
 
+
 function isEqual(obj1: { [x: string]: any; }, obj2: { [x: string]: any; }) {
   const keys1 = Object.keys(obj1);
   const keys2 = Object.keys(obj2);
