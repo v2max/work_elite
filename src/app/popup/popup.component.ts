@@ -51,6 +51,7 @@ export class PopupComponent implements OnInit {
         wishlist.push(list);
         let stringify = JSON.stringify(wishlist);
         localStorage.setItem('wishlist', stringify);
+        setbtn();
         console.log('Item added to wishlist');
       } else {
         false;
