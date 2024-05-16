@@ -4,10 +4,10 @@
             <div class="col" *ngFor="let boxset of collection">
                   <div class="card" (click)=" openPopup(boxset)">
                       <div class="card-img">
-                        <img src={{boxset.img}} class="card-img-top" alt="...">
+                        <img src={{boxset.img}} loading="lazy" class="card-img-top" alt="...">
                       </div>
                     <div class="card-body">
-                      <h2><label for="">₹</label>{{boxset.rate}}</h2>
+                      <h2><label for="">₹</label> {{boxset.rate}}</h2>
                       <h2 class="card-title">{{boxset.name}}</h2>
                       <h3 class="card-text">{{boxset.subname}}</h3>
                     </div>

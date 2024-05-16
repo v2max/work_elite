@@ -12,6 +12,7 @@
             <div class="carousel-item active">
               <img
                 class="img-slide"
+                loading="lazy"
                 src="assets/img/slider1.png"
                 class="d-block w-100"
                 alt=""
@@ -23,6 +24,7 @@
             <div class="carousel-item">
               <img
                 class="img-slide"
+                loading="lazy"
                 src="assets/img/slider2.png"
                 class="d-block w-100"
               />
@@ -33,6 +35,7 @@
             <div class="carousel-item">
               <img
                 class="img-slide"
+                loading="lazy"
                 src="assets/img/slider3.png"
                 class="d-block w-100"
                 
@@ -42,15 +45,6 @@
               </div>
             </div>
           </div>
-          <!-- <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button> -->
           <button
             class="carousel-control-next"
             type="button"
@@ -67,7 +61,7 @@
         <h1 class="hd">SET TRENDS</h1>
       </div>
       <div class="video-container">
-        <video autoplay playsInline [loop]="true"  [muted]="true" [src]="vdo" type="video/mp4" >
+        <video autoplay playsInline [loop]="true"  [muted]="true" [src]="vdo" type="video/mp4" loading="lazy" >
         
         </video>
       </div>
@@ -79,27 +73,30 @@
   
       <div class="gen">
         <div class="row">
-          <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="hding categ">
-              <h1 class="hd">MENS COLLECTION</h1>
-            </div>
+          <div class="col-sm-6">
+            <!-- <div class="hding categ">
+              <h1 class="hd">MEN'S COLLECTION</h1>
+            </div> -->
 
               <div class="card card-gen" (click)="clickMen()" >
-                <img class="img-gen" src="assets/img/gen-men2.jpg" alt="" />
+                <img class="img-gen" loading="lazy" src="assets/img/gen-men2.jpg" alt="" />
+                <div class="differ">MEN'S COLLECTION</div>
               </div>
             
           </div>
           <div class="col-sm-6">
-            <div class="hding categ">
-              <h1 class="hd">WOMENS COLLECTION</h1>
-            </div>
+            <!-- <div class="hding categ">
+              <h1 class="hd">WOMEN'S COLLECTION</h1>
+            </div> -->
             
               <div class="card card-gen" (click)="clickWomen()" >
                 <img
                   class="img-gen"
+                  loading="lazy"
                   src="assets/img/gen-women2.jpg"
                   alt=""
                 />
+                <div class="differ">WOMEN'S COLLECTION</div>
               </div>
             
           </div>
@@ -110,61 +107,22 @@
         <h1 class="hd">NEW ARRIVALS</h1>
       </div>
       <div class="col-frm">
-        <img class="col-pic" src="assets/img/newColl.jpg" alt="" />
+        <img class="col-pic" loading="lazy" src="assets/img/newColl.jpg" alt="" />
       </div>
   
       <!-- Collections cards -->
       <div class="row row-cols-2 row-cols-md-4 g-12">
         <div class="col" *ngFor="let boxset of newcol">
           <div class="card" (click)="openPopup(boxset)">
-            <img src="{{boxset.img }}" class="card-img-top" alt="..." />
+            <img src="{{boxset.img}}" loading="lazy" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title"><label>₹</label>{{ boxset.rate }}</h5>
+              <h5 class="card-title"><label>₹</label> {{boxset.rate }}</h5>
               <h5 class="card-title">{{ boxset.name }}</h5>
               <p class="card-text">{{ boxset.subname }}</p>
             </div>
           </div>
         </div>
       </div> 
-
-       <!-- <div class="end">
-        <div class="coll">
-          <div class="fhd-card">
-            <img
-              src="assets/img/exchange.png"
-              class="f-hd-logo"
-              alt="..."
-            />
-            <div class="card-body">
-              <h1><strong>100% EXCHANGE</strong></h1>
-            </div>
-          </div>
-        </div>
-        <div class="coll">
-          <div class="fhd-card">
-            <img
-              src="assets/img/hand.png"
-              class="f-hd-logo"
-              alt="..."
-            />
-            <div class="card-body">
-              <h1><strong>HAND PICKED</strong></h1>
-            </div>
-          </div>
-        </div>
-        <div class="coll">
-          <div class="fhd-card">
-            <img
-              src="assets/img/quality.png"
-              class="f-hd-logo"
-              alt="..."
-            />
-            <div class="card-body">
-              <h1><strong>ASSURED QUALITY</strong></h1>
-            </div>
-          </div>
-        </div>
-       </div> -->
       
 
     </div>
