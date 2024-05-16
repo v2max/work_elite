@@ -31,7 +31,7 @@ export class PopupComponent implements OnInit {
     console.log(list, 'data for list');
 
     if (wishlist.length == 0) {
-       wishlist.push( list);
+      wishlist.push( list);
       let stringfiy = JSON.stringify( wishlist);
       localStorage.setItem('wishlist', stringfiy);
       console.log('length');

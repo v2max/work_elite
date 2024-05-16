@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PopupComponent } from './popup/popup.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

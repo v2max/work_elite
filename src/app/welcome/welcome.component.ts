@@ -15,7 +15,7 @@ import { MatDialog } from '@angular/material/dialog';
   providedIn: 'root'
 })
 
-export class WelcomeComponent {
+export class WelcomeComponent implements OnInit {
 
   [x: string]: any;
   vdo:any="assets/img/stiles.mp4";
@@ -26,6 +26,9 @@ export class WelcomeComponent {
 
    
     }
+  ngOnInit(): void {
+    this.clicekNewCol()
+  }
 
   menData: any = 'assets/data/men.data.json';
   womenData: any = 'assets/data/women.data.json';
@@ -41,7 +44,7 @@ export class WelcomeComponent {
     console.log('Women area clicked');
   }
 
-  clicekNwCol(){
+  clicekNewCol(){
     this.httpClient.get('assets/data/newCollection.json').subscribe((data: any) => {
      this.newcol= data;
    });
