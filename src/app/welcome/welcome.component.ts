@@ -47,6 +47,14 @@ export class WelcomeComponent implements OnInit {
   clicekNewCol(){
     this.httpClient.get('assets/data/newCollection.json').subscribe((data: any) => {
      this.newcol= data;
+
+     for(let i =0;i< this.newcol.length;i++){
+
+      let bundle = this.newcol[i].rate.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      this.newcol[i].rate = bundle;
+      console.log(this.newcol[i].rate,'newRate');
+
+     }
    });
  }
 
