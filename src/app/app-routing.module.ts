@@ -5,7 +5,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FormComponent } from './form/form.component';
 import { LogComponent } from './log/log.component';
 import { CollectionComponent } from './collection/collection.component';
-import { AboutComponent } from './about/about.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
  {path:'login',component:LogComponent},
  {path:'form',component:FormComponent},
  {path:'collection',component:CollectionComponent},
- {path:'about',component:AboutComponent},
  {path:'wish',component:WishlistComponent}
 
 ];

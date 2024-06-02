@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { CollectionComponent } from './collection/collection.component';
 
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -25,7 +24,6 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     CollectionComponent,
     WelcomeComponent,
     NavtabComponent,

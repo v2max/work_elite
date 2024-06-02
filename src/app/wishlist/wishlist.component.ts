@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-wishlist',
-  templateUrl: './wishlist.component.html',
+  templateUrl:'./wishlist.component.html',
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
