@@ -9,44 +9,35 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class PopupComponent implements OnInit {
   [x: string]: any;
   boxset: any;
-  list : any;
-  wishlist :any;
+  list: any;
+  wishlist: any;
+  isAlreadyInWishlist: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<PopupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     console.log('djfhjdhfjdh', data);
-       this.list = data
+    this.list = data;
   }
 
   ngOnInit() {
-    this.check()
+    this.check();
   }
 
   wish() {
-    this.checkExistWish()
-
-    let isAlreadyInWishlist = false;
+    this.checkExistWish();
 
     console.log(this.list, 'data for list');
 
     if (this.wishlist.length == 0) {
-      this.setStorage()
-      console.log('length');
+      this.setStorage();
+    
     } else {
-      console.log('in for');
 
-      for (let i = 0; i < this.wishlist.length; i++) {
-        if (isEqual(this.wishlist[i], this.list)) {
-          console.log('Item already exists in wishlist');
-          setbtn();
-          isAlreadyInWishlist = true;
-          break;
-        }
-      }
+      this.loopForwish();
 
-      if (!isAlreadyInWishlist) {
-        this.setStorage()
+      if (!this.isAlreadyInWishlist) {
+        this.setStorage();
         setbtn();
         console.log('Item added to wishlist');
       } else {
@@ -55,50 +46,48 @@ export class PopupComponent implements OnInit {
     }
   }
 
-  check(){
+  check() {
+    
+    this.checkExistWish();
 
-    this.checkExistWish()
-
-    if (this.wishlist.length == 0) {
-      this.setStorage()
-   }else{
-
-    for (let i = 0; i < this.wishlist.length; i++) {
-      if (isEqual(this.wishlist[i], this.list)) {
-        
-        setbtn();
-        break;
-
-      }else{
-        false;
-      }
-    }
-
-   }
-
+     this.findWishlist()
+    
   }
 
   close(): void {
     this.dialogRef.close();
   }
 
-  setStorage(this: any){
+  setStorage(this: any) {
     this.wishlist.push(this.list);
-       let setString = JSON.stringify( this.wishlist);
-       localStorage.setItem('wishlist', setString);
-  
+    let setString = JSON.stringify(this.wishlist);
+    localStorage.setItem('wishlist', setString);
   }
 
-  checkExistWish(){
+  checkExistWish() {
     let existWish = localStorage.getItem('wishlist');
     this.wishlist = existWish ? JSON.parse(existWish) : [];
   }
 
+  loopForwish() {
+    for (let i = 0; i < this.wishlist.length; i++) {
+      if (isEqual(this.wishlist[i], this.list)) {
+        setbtn();
+        break;
+      }
+    }
+  }
+   
+  findWishlist(){
+    if (this.wishlist.length == 0) {
+      this.setStorage();
+    } else {
+      this.loopForwish();
+    }
 
+  }
 
 }
-
- 
 
 function setbtn() {
   const myButton = document.querySelector('#wishbtn') as HTMLButtonElement;

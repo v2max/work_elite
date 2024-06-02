@@ -1,12 +1,5 @@
 
-// .container-bg{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     width: 100%;
-//     background-color: black;
-//     padding-top: 100px;
-// }
+
 *{
     margin: 0;
     padding: 0;
@@ -15,23 +8,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     background-color: black;
-    padding-top: 100px;
+    padding-top: 50px;
 
+  }
+  .main1{
+    width:100%;
   }
   
   .topimg{
-    width: 93%;
-     margin-top: 15px;
-     padding: 0px 51px
+    height: 100%;
+    width: 100vw;
   }
   .t1t{
     position: absolute;
-    top: 85px;
-    right: 385px;
-    color: rgba(199, 197, 192, 0.849);
-    font-size: -webkit-xxx-large;
+    top: 135px;
+    right: 335px;
+    color: rgb(181 178 171 / 85%);
+    font-size: 45px;
   }
   .t2t{
     position: absolute;
