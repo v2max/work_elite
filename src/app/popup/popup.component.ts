@@ -25,20 +25,13 @@ export class PopupComponent implements OnInit {
   }
 
   wish() {
-    this.checkExistWish();
-
-    console.log(this.list, 'data for list');
 
     if (this.wishlist.length == 0) {
       this.setStorage();
-    
     } else {
-
       this.loopForwish();
-
       if (!this.isAlreadyInWishlist) {
         this.setStorage();
-        setbtn();
         console.log('Item added to wishlist');
       } else {
         false;
@@ -47,11 +40,8 @@ export class PopupComponent implements OnInit {
   }
 
   check() {
-    
-    this.checkExistWish();
-
-     this.findWishlist()
-    
+    this.checkExistWish()
+    this.loopForwish()
   }
 
   close(): void {
@@ -62,6 +52,7 @@ export class PopupComponent implements OnInit {
     this.wishlist.push(this.list);
     let setString = JSON.stringify(this.wishlist);
     localStorage.setItem('wishlist', setString);
+    setbtn();
   }
 
   checkExistWish() {
@@ -78,14 +69,7 @@ export class PopupComponent implements OnInit {
     }
   }
    
-  findWishlist(){
-    if (this.wishlist.length == 0) {
-      this.setStorage();
-    } else {
-      this.loopForwish();
-    }
-
-  }
+  
 
 }
 
@@ -102,12 +86,10 @@ function isEqual(obj1: { [x: string]: any }, obj2: { [x: string]: any }) {
   if (keys1.length !== keys2.length) {
     return false;
   }
-
   for (let key of keys1) {
     if (obj1[key] !== obj2[key]) {
       return false;
     }
   }
-
   return true;
 }

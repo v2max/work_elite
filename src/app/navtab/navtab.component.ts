@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navtab.component.scss']
 })
 export class NavtabComponent {
-
+  
 }
